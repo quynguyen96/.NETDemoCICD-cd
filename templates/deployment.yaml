@@ -1,3 +1,22 @@
-containers:
-  - name: api
-    image: "{{ .Values.api.image.repository }}:{{ .Values.api.image.tag }}"
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}
+  labels:
+    app: {{ .Release.Name }}
+spec:
+  replicas: {{ .Values.api.replicaCount | default 1 }}
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}
+    spec:
+      containers:
+        - name: api
+          image: "{{ .Values.api.image.repository }}:{{ .Values.api.image.tag }}"
+          imagePullPolicy: Always
+          ports:
+            - containerPort: {{ .Values.api.port | default 80 }}

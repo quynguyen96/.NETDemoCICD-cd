@@ -1,0 +1,4 @@
+api:
+  image:
+    repository: quynguyen96/democicdapp
+    tag: latest

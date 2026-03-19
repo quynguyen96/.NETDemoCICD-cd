@@ -2,11 +2,11 @@ api:
   replicaCount: 1
   image:
     repository: quynguyen96/democicdapp
-    tag: dec1043
+    tag: 40b923e
   port: 8080
 
 worker:
   replicaCount: 1
   image:
     repository: quynguyen96/democicdworker
-    tag: old
+    tag: 40b923e

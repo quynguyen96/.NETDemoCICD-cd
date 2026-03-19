@@ -2,5 +2,5 @@ api:
   replicaCount: 1
   image:
     repository: quynguyen96/democicdapp
-    tag: b47baef
+    tag: 1e7072d
   port: 8080

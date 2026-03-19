@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: netdemocicd-dev
+spec:
+  project: default
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  source:
+    repoURL: https://github.com/quynguyen96/.NETDemoCICD-cd
+    targetRevision: main
+    path: deployment
+    helm:
+      valueFiles:
+        - values-dev.yaml
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

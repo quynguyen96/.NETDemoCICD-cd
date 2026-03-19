@@ -3,4 +3,4 @@ api:
   image:
     repository: quynguyen96/democicdapp
     tag: dec1043
-  port: 80
+  port: 8080

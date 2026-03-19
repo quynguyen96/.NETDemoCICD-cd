@@ -19,4 +19,4 @@ spec:
           image: "{{ .Values.api.image.repository }}:{{ .Values.api.image.tag }}"
           imagePullPolicy: Always
           ports:
-            - containerPort: {{ .Values.api.port | default 80 }}
+            - containerPort: {{ .Values.api.port | default 8080 }}

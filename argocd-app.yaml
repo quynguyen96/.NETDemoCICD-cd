@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/quynguyen96/.NETDemoCICD-cd
     targetRevision: main
-    path: deployment
+    path: deployment/
     helm:
       valueFiles:
         - values-dev.yaml
